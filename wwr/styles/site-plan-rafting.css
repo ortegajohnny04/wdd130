@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=font-name&family=optional-2nd-font-name&display=swap');
+
+:root {
+    /* Colors */
+    --primary-color: #396e94;
+    --secondary-color: #e7c24f;
+    --accent-color: #a43312;
+    --additional-accent-color: #381d2a;
+    
+    /* Fonts */
+    --heading-font: 'Montserrat', sans-serif;
+    --paragraph-font: 'Lato', sans-serif;
+    
+    /* Navigation */
+    --nav-background-color: #396e94;
+    --nav-link-color: #fff;
+    --nav-hover-link-color: #e7c24f;
+    --nav-hover-background-color: #381d2a;
+}
+
+body {
+    font-family: var(--paragraph-font);
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--heading-font);
+    color: #333;
+}
+
+header {
+    padding: 20px;
+    background-color: var(--primary-color); 
+    color: #fff;
+}
+
+p {
+    padding: 10px;
+}
+
+nav {
+    background-color: var(--nav-background-color);
+    padding: 10px 20px; 
+    text-align: center; 
+
+nav a {
+    text-decoration: none; 
+    color: var(--nav-link-color);
+    padding: 10px 20px; 
+    transition: color 0.3s, background-color 0.3s; 
+}
+
+nav a:hover {
+    color: var(--nav-hover-link-color);
+    background-color: var(--nav-hover-background-color);
+}
+}
+

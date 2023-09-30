@@ -1,11 +1,21 @@
+/* Apply a CSS reset to all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Define common styles for the main content container */
 main {
     max-width: 840px;
 }
 
+/* Styles for the aside section */
 aside {
+    position: relative;
     width: 20rem;
     margin: 1rem;
-    border: 1px solid rgba (0, 0, 0, 0.2);
+    border: 1px solid rgba(0, 0, 0, 0.2);
     padding: 1rem;
     background-color: #eee;
     color: #333;
@@ -17,15 +27,41 @@ aside img {
     height: auto;
 }
 
+/* Styles for profile images within the main content */
 main img {
     width: 150px;
     height: auto;
+    float: right;
 }
 
-p {padding: 0;}
+/* Absolute positioning for the state/country heading */
+aside h2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 5px;
+    margin: 0;
+}
 
+/* Clear the float for paragraphs after profile images */
+p {
+    padding: 0;
+    clear: right;
+}
+
+/* Styles for the footer */
 footer {
     margin-top: 1em;
     border-top: 1px solid #000;
     text-align: center;
+}
+
+/* Class Selector Styles */
+.box {
+    margin: 1rem;
+    padding: 1rem;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    background-color: #f7f7f7;
+    color: #555;
 }

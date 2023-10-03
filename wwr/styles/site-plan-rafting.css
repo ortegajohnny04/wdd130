@@ -1,60 +1,57 @@
-@import url('https://fonts.googleapis.com/css2?family=font-name&family=optional-2nd-font-name&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 :root {
-    /* Colors */
-    --primary-color: #396e94;
-    --secondary-color: #e7c24f;
-    --accent-color: #a43312;
-    --additional-accent-color: #381d2a;
-    
-    /* Fonts */
-    --heading-font: 'Montserrat', sans-serif;
-    --paragraph-font: 'Lato', sans-serif;
-    
-    /* Navigation */
-    --nav-background-color: #396e94;
-    --nav-link-color: #fff;
-    --nav-hover-link-color: #e7c24f;
-    --nav-hover-background-color: #381d2a;
+    --primary-color: #2d61a2;
+    --secondary-color: #00000a;
+    --accent1-color: #070833;
+    --accent2-color: #111b34;
+  
+    --heading-font: 'Roboto', serif;
+    --paragraph-font: 'Roboto', serif;
+  
+    --nav-background-color: #2d61a2; /* Corrected color code */
+    --nav-link-color: white;
+    --nav-hover-link-color: white;
+    --nav-hover-background-color: #070833; /* Corrected color code */
 }
 
 body {
-    font-family: var(--paragraph-font);
-    max-width: 960px;
-    margin: 0 auto;
-    padding: 20px;
+    font-family: var(--paragraph-font); /* Set the font-family to the paragraph-font variable */
+    max-width: 960px; /* Limit the maximum width to 960 pixels */
+    padding: 20px; /* Set padding around the document to 20 pixels */
 }
-
 h1, h2, h3, h4, h5, h6 {
-    font-family: var(--heading-font);
-    color: #333;
+    font-family: var(--heading-font); /* Set the font-family to the heading-font variable */
+    color: black; /* Set your desired color */
 }
 
 header {
-    padding: 20px;
-    background-color: var(--primary-color); 
-    color: #fff;
+    background-color: var(--nav-background-color); /* Set the background color using the nav-background-color variable */
+    padding: 20px; /* Add padding to the header */
 }
 
 p {
-    padding: 10px;
-}
+    padding: 25px;
+  }
 
-nav {
+  nav {
     background-color: var(--nav-background-color);
-    padding: 10px 20px; 
-    text-align: center; 
-
-nav a {
-    text-decoration: none; 
+    font-size: 1.2rem;
+    display: flex;
+  }
+  
+  nav a {
+    display: block;
     color: var(--nav-link-color);
-    padding: 10px 20px; 
-    transition: color 0.3s, background-color 0.3s; 
-}
-
-nav a:hover {
+    text-decoration: none;
+    padding: 1rem;
+  }
+  
+  nav a:link, nav a:visited {
+    color: var(--nav-link-color);
+  }
+  
+  nav a:hover {
     color: var(--nav-hover-link-color);
     background-color: var(--nav-hover-background-color);
-}
-}
-
+  }

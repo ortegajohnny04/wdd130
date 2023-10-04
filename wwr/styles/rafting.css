@@ -244,7 +244,7 @@ footer {
 /* Style the adventure gallery container with Flexbox */
 .adventure-gallery {
     display: flex;
-    justify-content: space-between; /* Space items evenly along the horizontal axis */
+    justify-content: space-evenly; /* Space items evenly along the horizontal axis */
 }
 
 /* Style each adventure item */
@@ -255,8 +255,10 @@ footer {
 
 /* Style the image inside each figure */
 .adventure-item img {
-    max-width: 100%;
-    height: auto;
+    width: 200px; /* Set a fixed width for the images */
+    height: 150px; /* Set a fixed height for the images */
+    object-fit: cover; /* Maintain aspect ratio and cover the container */
+    border: 1px solid #ddd; /* Add a border for separation */
 }
 
 /* Style the figcaption */
@@ -265,4 +267,5 @@ footer {
     color: #666;
     font-size: 1.2rem;
 }
+
 

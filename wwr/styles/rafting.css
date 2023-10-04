@@ -1,16 +1,21 @@
 /* Import the Roboto font from Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
-/* Define CSS variables for colors */
+/* Apply a CSS reset to normalize default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Define CSS variables for colors and fonts */
 :root {
     --primary-color: #2d61a2;
     --secondary-color: #00000a;
     --accent1-color: #070833;
     --accent2-color: #111b34;
-  
     --heading-font: 'Roboto', sans-serif;
     --paragraph-font: 'Roboto', sans-serif;
-  
     --nav-background-color: #2d61a2;
     --nav-link-color: white;
     --nav-hover-link-color: white;
@@ -21,21 +26,16 @@
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--heading-font);
     color: var(--primary-color);
-    margin: 0; /* Remove default margins */
+    margin: 0;
 }
 
 p {
     font-family: var(--paragraph-font);
     color: black;
     display: block;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;    
-    line-height: 2; /* Improved readability with line-height */
+    margin: 0;
+    line-height: 2;
 }
-
-
 
 /* Remove underlines from social media links */
 .nav.sociallinks a {
@@ -47,43 +47,47 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
-    background-color: #f5f5f5; /* Add a light background color */
+    background-color: #f5f5f5;
 }
 
-/* Style the header with background color and padding */
+/* Style the header */
 header {
     background-color: var(--nav-background-color);
     padding: 10px 0;
-    display: flex; /* Align logo and nav side by side */
-    justify-content: space-evenly; /* Space them evenly */
-    align-items: center; /* Vertically center items */
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
     display: grid;
-    grid-template-columns: auto 1fr; /* Two columns, the first auto-sized for the logo, the second takes up the remaining space */
+    grid-template-columns: auto 1fr;
 }
 
-
-img{
+/* Style images */
+img {
     display: block;
     width: 100%;
     height: auto;
 }
 
-/* Style h2 headings in sections */
+/* Style headings in sections */
 section h2 {
     color: #00000a;
     font-size: 2rem;
-    margin-bottom: 20px; /* Add space below headings */}
+    margin-bottom: 20px;
+}
 
-    /* Style paragraphs in sections */
+/* Style paragraphs in sections */
 section p {
     color: #333;
-    font-size: 1.2rem; }
+    font-size: 1.2rem;
+}
 
+/* Style navigation */
 nav {
-    display: flex; /* Enable Flexbox */
-    justify-content: flex-end; /* Push items to the right */
-    }
+    display: flex;
+    justify-content: flex-end;
+}
 
+/* Style navigation links */
 /* Style navigation links */
 nav ul {
     list-style-type: none; /* Remove bullet points */
@@ -93,7 +97,8 @@ nav ul {
 
 nav ul li {
     display: inline; /* Display list items horizontally */
-    margin-right: 50px; /* Add spacing between list items */
+    margin-right: 100px; /* Add spacing between list items */
+    font-size: 18px; /* Set the font size to 14px */
 }
 
 nav ul li a {
@@ -105,15 +110,15 @@ nav ul li a {
 nav ul li a:hover {
     color: var(--nav-hover-link-color);
     background-color: var(--nav-hover-background-color);
-    border-radius: 5px; /* Add rounded corners on hover */
-    padding: 5px 10px; /* Increase padding on hover */
+    border-radius: 5px;
+    padding: 5px 10px;
 }
 
-/* Style the hero container with relative positioning */
+/* Style the hero container */
 .hero {
     position: relative;
-    overflow: hidden; /* Hide overflowing content */
-    height: 400px; /* Set a fixed height for the hero container */
+    overflow: hidden;
+    height: 400px;
 }
 
 /* Style the hero image */
@@ -121,7 +126,7 @@ nav ul li a:hover {
     display: block;
     width: 100%;
     height: auto;
-  }
+}
 
 /* Style the hero content */
 .hero-content {
@@ -132,12 +137,12 @@ nav ul li a:hover {
     text-align: center;
 }
 
-/* Style the hero h1 heading with absolute positioning */
+/* Style the hero h1 heading */
 .hero h1 {
     position: absolute;
-    top: 50%; /* Vertically center the heading */
-    left: 25%; /* Horizontally center the heading */
-    transform: translate(-50%, -50%); /* Center both horizontally and vertically */
+    top: 50%;
+    left: 25%;
+    transform: translate(-50%, -50%);
     background-color: var(--accent1-color);
     padding: 10px 20px;
     border-radius: 5px;
@@ -146,65 +151,64 @@ nav ul li a:hover {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-/* Style the article with absolute positioning */
+/* Style the article */
 .hero article {
     position: absolute;
-    top: 0px; /* Adjust the top position as needed */
-    right: 10px; /* Adjust the right position as needed */
-    background-color: rgba(255, 255, 255, 0.7); /* White background color with opacity */
-    padding: 20px; /* Padding to make the content readable */
-    color: white; /* Text color */
-    max-width: 300px; /* Limit the width of the article */
-    border-radius: 5px; /* Add rounded corners */
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Add a box shadow */
+    top: 0;
+    right: 10px;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 20px;
+    color: white;
+    max-width: 300px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
-
-/* Style the image inside the article to float right */
+/* Style the image inside the article */
 .hero article img {
     float: right;
-    margin-left: 10px; /* Add some space between image and text */
+    margin-left: 10px;
 }
 
-
-/* Style the footer */
 footer {
-    display: block;
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
     width: 100%;
     height: auto;
+    margin-bottom: 20px; /* Add some spacing between footer and social links */
+    border-top: 1px solid #070833; /* Add a 1px solid line at the top of the footer */
+
 }
 
-/* Style social media links in the footer */
+
+/* Social media links styles */
+.sociallinks {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+
 .sociallinks a {
     text-decoration: none;
     color: white;
     margin: 0 10px;
-    
 }
 
 .sociallinks a:hover {
     text-decoration: underline;
 }
 
-/* Style for small social media icons */
+/* Small social media icons styles */
 .sociallinks .small-icon {
-    width: 30px; /* Adjust the size as needed */
-    height: 30px; /* Adjust the size as needed */
-    display: inline; /* Display list items horizontally */
-    margin-right: 0; /* Add spacing between list items */
+    width: 30px;
+    height: 30px;
+    display: inline;
+    margin-right: 0;
 }
 
-/* Add a subtle animation to the header logo */
-#logo img {
-    transition: transform 0.3s ease-in-out; /* Add a smooth transform transition */
-}
-
-/* Enlarge the header logo on hover */
-#logo:hover img {
-    transform: scale(1.1); /* Scale up on hover */
-}
-
-/* Style the History section container */
+/* Style the History section */
 .history-section {
     background-color: #f5f5f5;
     padding: 20px;
@@ -214,53 +218,31 @@ footer {
     text-align: center;
 }
 
-/* Style the h2 heading */
-.history-section h2 {
-    color: #333;
-    font-size: 2rem;
-    margin-bottom: 20px;
-}
-
-/* Style the paragraph */
-.history-section p {
-    color: #666;
-    font-size: 1.2rem;
-    line-height: 1.5;
-    max-width: 600px;
-}
-
-/* Style the Adventures section container */
+/* Style the Adventures section */
 .adventures-section {
     background-color: #fff;
     padding: 20px;
     text-align: center;
 }
 
-/* Style the h2 heading */
-.adventures-section h2 {
-    color: #333;
-    font-size: 2rem;
-    margin-bottom: 20px;
-}
-
-/* Style the adventure gallery container with Flexbox */
+/* Style the adventure gallery container */
 .adventure-gallery {
     display: flex;
-    justify-content: space-evenly; /* Space items evenly along the horizontal axis */
+    justify-content: space-evenly;
 }
 
 /* Style each adventure item */
 .adventure-item {
-    flex: 0 0 calc(20% - 10px); /* Calculate the width for each item (20% with 10px spacing) */
+    flex: 0 0 calc(20% - 10px);
     text-align: center;
 }
 
 /* Style the image inside each figure */
 .adventure-item img {
-    width: 200px; /* Set a fixed width for the images */
-    height: 150px; /* Set a fixed height for the images */
-    object-fit: cover; /* Maintain aspect ratio and cover the container */
-    border: 1px solid #ddd; /* Add a border for separation */
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    border: 1px solid #ddd;
 }
 
 /* Style the figcaption */
@@ -270,4 +252,9 @@ footer {
     font-size: 1.2rem;
 }
 
-
+/* Set a specific size for the logo */
+#logo img {
+    transition: transform 0.3s ease-in-out; /* Add a smooth transform transition */
+    width: 120px; /* Adjust the width as needed */
+    height: auto; /* Allow the height to adjust proportionally */
+}

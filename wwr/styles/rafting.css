@@ -55,11 +55,12 @@ header {
     background-color: var(--nav-background-color);
     padding: 10px 0;
     display: flex; /* Align logo and nav side by side */
-    justify-content: space-between; /* Space them evenly */
+    justify-content: space-evenly; /* Space them evenly */
     align-items: center; /* Vertically center items */
     display: grid;
     grid-template-columns: auto 1fr; /* Two columns, the first auto-sized for the logo, the second takes up the remaining space */
 }
+
 
 img{
     display: block;
@@ -92,7 +93,7 @@ nav ul {
 
 nav ul li {
     display: inline; /* Display list items horizontally */
-    margin-right: 20px; /* Add spacing between list items */
+    margin-right: 50px; /* Add spacing between list items */
 }
 
 nav ul li a {
@@ -178,6 +179,7 @@ footer {
     text-decoration: none;
     color: white;
     margin: 0 10px;
+    
 }
 
 .sociallinks a:hover {

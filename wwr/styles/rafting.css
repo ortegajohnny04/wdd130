@@ -170,23 +170,20 @@ nav ul li a:hover {
     margin-left: 10px;
 }
 
+/* Footer styles */
 footer {
     display: flex;
-    flex-direction: column; /* Stack elements vertically */
-    justify-content: center; /* Center horizontally */
+    justify-content: space-between; /* Space items evenly along the horizontal axis */
     align-items: center; /* Center vertically */
     width: 100%;
     height: auto;
-    margin-bottom: 20px; /* Add some spacing between footer and social links */
-    border-top: 1px solid #070833; /* Add a 1px solid line at the top of the footer */
-
+    padding: 1rem;
 }
-
 
 /* Social media links styles */
 .sociallinks {
     display: flex;
-    justify-content: center; /* Center horizontally */
+    justify-content: flex-end; /* Push items to the right */
     align-items: center; /* Center vertically */
 }
 
@@ -202,11 +199,12 @@ footer {
 
 /* Small social media icons styles */
 .sociallinks .small-icon {
-    width: 30px;
-    height: 30px;
-    display: inline;
-    margin-right: 0;
+    width: 30px; /* Adjust the size as needed */
+    height: 30px; /* Adjust the size as needed */
+    display: inline; /* Display list items horizontally */
+    margin-right: 0; /* Add spacing between list items */
 }
+
 
 /* Style the History section */
 .history-section {

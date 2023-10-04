@@ -1,66 +1,111 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Lato&display=swap');
+/* Import the Roboto font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 /* Define CSS variables for colors */
 :root {
-    --primary-color: #396e94;
-    --secondary-color: #e7c24f;
-    --accent-color: #a43312;
-    --additional-accent-color: #381d2a;
-    
-    /* Fonts */
-    --heading-font: 'Montserrat', sans-serif;
-    --paragraph-font: 'Lato', sans-serif;
-    
-    /* Navigation */
-    --nav-background-color: #396e94;
-    --nav-link-color: #fff;
-    --nav-hover-link-color: #e7c24f;
-    --nav-hover-background-color: #381d2a;
-}
-img.logo {
-    width: 200px;
-}
-ul {
-    grid-row: 1/2;
-    grid-column: 2/7;
-    display: grid; 
-    grid-template-columns: repeat(auto-fit, minmax(6em, 1fr));
-    width: 100%;
-    height: 100px;
-}
-
-ul a {
-    text-decoration: none;
-    color: black;
-    padding: 35px;
-    text-align: center;
-    
+    --primary-color: #2d61a2;
+    --secondary-color: #00000a;
+    --accent1-color: #070833;
+    --accent2-color: #111b34;
+  
+    --heading-font: 'Roboto', sans-serif;
+    --paragraph-font: 'Roboto', sans-serif;
+  
+    --nav-background-color: #2d61a2;
+    --nav-link-color: white;
+    --nav-hover-link-color: white;
+    --nav-hover-background-color: #070833;
 }
 
 /* Apply styles to headings and paragraphs */
 h1, h2, h3, h4, h5, h6 {
-    color: var(--primary-color); /* Apply primary color to headings */
+    font-family: var(--heading-font);
+    color: var(--primary-color);
+    margin: 0; /* Remove default margins */
 }
 
 p {
-    color: var(--text-color); /* Apply text color to paragraphs */
+    font-family: var(--paragraph-font);
+    color: black;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;    
+    line-height: 2; /* Improved readability with line-height */
 }
 
-/* Style social media links */
+
+
+/* Remove underlines from social media links */
 .nav.sociallinks a {
-    text-decoration: none; /* Remove underlines */
+    text-decoration: none;
 }
 
-/* Limit page width */
+/* Limit the entire width of the page and center content */
 body {
-    max-width: 1200px; /* Adjust the maximum width as needed */
-    margin: 0 auto; /* Center the page horizontally */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f5f5f5; /* Add a light background color */
 }
 
-/* Style the Hero Container using Position Absolute */
+/* Style the header with background color and padding */
+header {
+    background-color: var(--nav-background-color);
+    padding: 10px 0;
+    display: flex; /* Align logo and nav side by side */
+    justify-content: space-between; /* Space them evenly */
+    align-items: center; /* Vertically center items */
+}
+
+img{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* Style h2 headings in sections */
+section h2 {
+    color: #00000a;
+    font-size: 2rem;
+    margin-bottom: 20px; /* Add space below headings */}
+
+    /* Style paragraphs in sections */
+section p {
+    color: #333;
+    font-size: 1.2rem; }
+
+/* Style navigation links */
+nav ul {
+    list-style-type: none; /* Remove bullet points */
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline; /* Display list items horizontally */
+    margin-right: 20px; /* Add spacing between list items */
+}
+
+nav ul li a {
+    color: var(--nav-link-color);
+    text-decoration: none;
+    transition: color 0.3s; /* Smooth color transition on hover */
+}
+
+nav ul li a:hover {
+    color: var(--nav-hover-link-color);
+    background-color: var(--nav-hover-background-color);
+    border-radius: 5px; /* Add rounded corners on hover */
+    padding: 5px 10px; /* Increase padding on hover */
+}
+
+/* Style the hero container with relative positioning */
 .hero {
     position: relative;
-    max-width: 100%; /* Ensure the container doesn't exceed its parent's width */
+    overflow: hidden; /* Hide overflowing content */
+    height: 400px; /* Set a fixed height for the hero container */
 }
 
 /* Style the hero image */
@@ -68,44 +113,84 @@ body {
     display: block;
     width: 100%;
     height: auto;
-}
+  }
 
-/* Position the h1 heading absolutely */
-.hero h1 {
+/* Style the hero content */
+.hero-content {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: var(--primary-color); /* Apply primary color to heading */
-    font-family: var(--heading-font); /* Use the specified font for headings */
-    font-size: 2rem; /* Adjust the font size as needed */
-    background-color: rgba(255, 255, 255, 0.8); /* Background color with opacity for readability */
-    padding: 10px 20px; /* Add padding for better aesthetics */
-    border-radius: 5px; /* Add border-radius for rounded corners */
+    text-align: center;
 }
 
-/* Position the article absolutely */
+/* Style the hero h1 heading with absolute positioning */
+.hero h1 {
+    position: absolute;
+    top: 50%; /* Vertically center the heading */
+    left: 25%; /* Horizontally center the heading */
+    transform: translate(-50%, -50%); /* Center both horizontally and vertically */
+    background-color: var(--accent1-color);
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: white;
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Style the article with absolute positioning */
 .hero article {
     position: absolute;
-    top: 50%;
-    right: 10%; /* Adjust the distance from the right edge as needed */
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.7); /* Background color with opacity for readability */
-    color: #fff; /* Text color for better contrast */
-    padding: 20px; /* Add padding for better aesthetics */
-    width: 40%; /* Adjust the width of the article as needed */
+    top: 0px; /* Adjust the top position as needed */
+    right: 10px; /* Adjust the right position as needed */
+    background-color: rgba(255, 255, 255, 0.7); /* White background color with opacity */
+    padding: 20px; /* Padding to make the content readable */
+    color: white; /* Text color */
+    max-width: 300px; /* Limit the width of the article */
+    border-radius: 5px; /* Add rounded corners */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Add a box shadow */
 }
+
 
 /* Style the image inside the article to float right */
 .hero article img {
     float: right;
-    margin-left: 20px; /* Adjust the margin between the image and the paragraph */
+    margin-left: 10px; /* Add some space between image and text */
 }
 
-/* You can adjust the opacity, padding, font size, and other styles to fit your design preferences */
+
+/* Style the footer */
+footer {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* Style social media links in the footer */
+.sociallinks a {
+    text-decoration: none;
+    color: white;
+    margin: 0 10px;
+}
+
+.sociallinks a:hover {
+    text-decoration: underline;
+}
 
 /* Style for small social media icons */
 .sociallinks .small-icon {
-    width: 50px; /* Adjust the size as needed */
-    height: 50px; /* Adjust the size as needed */
+    width: 30px; /* Adjust the size as needed */
+    height: 30px; /* Adjust the size as needed */
+    display: inline; /* Display list items horizontally */
+    margin-right: 0; /* Add spacing between list items */
+}
+
+/* Add a subtle animation to the header logo */
+#logo img {
+    transition: transform 0.3s ease-in-out; /* Add a smooth transform transition */
+}
+
+/* Enlarge the header logo on hover */
+#logo:hover img {
+    transform: scale(1.1); /* Scale up on hover */
 }

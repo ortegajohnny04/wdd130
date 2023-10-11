@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="styles/quiz.css">
+    <title>HTML and CSS Quiz</title>
+</head>
+<body>
+    <h1>HTML and CSS Quiz</h1>
+    <form action="quiz_results.html" method="post">
+        
+        <p>1. What is the HTML tag for creating a hyperlink? (Fill in the blank)</p>
+        <label for="q1">Your Answer:</label>
+        <input type="text" id="q1" name="q1"><br>
+        
+        <p>2. Describe the purpose of the CSS "margin" property. (Short answer)</p>
+        <label for="q2">Your Answer:</label>
+        <textarea id="q2" name="q2" rows="4" cols="50"></textarea><br>
+
+        <p>3. What is the correct way to define an HTML checkbox input element? (Select one)</p>
+        <label for="q3">Select an option:</label>
+        <select id="q3" name="q3">
+            <option value="" selected disabled>Choose One...</option>
+            <option value="a">&lt;check&gt;</option>
+            <option value="b">&lt;input type="checkbox"&gt;</option>
+            <option value="c">&lt;checkbox&gt;</option>
+        </select><br>
+        
+        <p>4. How would you specify that an input field only accepts whole numbers in HTML? (Enter a number)</p>
+        <label for="q4">Your Answer:</label>
+        <input type="number" id="q4" name="q4" step="1"><br>
+
+        <input type="submit" value="Submit Quiz"> <!-- Submit button -->
+
+    </form>
+</body>
+</html>

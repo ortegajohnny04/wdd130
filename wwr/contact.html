@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="styles/rafting.css"> <!-- Link to your CSS file -->
+</head>
+<body>
+    <header>
+        <div id="logo">
+            <img src="images/logo.png" alt="Your Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="site-plan-rafting.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="trips.html">Trips</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="employee-profiles">
+            <h2>Meet Our Team</h2>
+            <div class="employee-profile">
+                <img src="images/employee1.jpg" alt="Employee 1">
+                <p>Captain Adventure</p>
+            </div>
+            <div class="employee-profile">
+                <img src="images/employee2.jpg" alt="Employee 2">
+                <p>River Navigator</p>
+            </div>
+            <div class="employee-profile">
+                <img src="images/employee3.jpg" alt="Employee 3">
+                <p>Whitewater Enthusiast</p>
+            </div>
+        </section>
+
+        <section id="contact-form">
+            <h2>Contact Us</h2>
+            <div class="map-container">
+                <!-- Replace the "your_map_embed_code_here" with your actual Google Maps embed code -->
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7874.899708504803!2d123.2638061901185!3d9.293347413115567!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33ab6f528c1c427b%3A0xab547e0f731b033b!2sTalay%2C%20Dumaguete%2C%20Negros%20Oriental!5e0!3m2!1sen!2sph!4v1696989596904!5m2!1sen!2sph" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <form action="submit_form.php" method="post"> <!-- Replace with your form handling script -->
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Purpose of the Message:</label>
+                    <div class="radio-group">
+                        <input type="radio" id="general" name="purpose" value="General Inquiry" required>
+                        <label for="general">General Inquiry</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="reservation" name="purpose" value="Reservation Question">
+                        <label for="reservation">Reservation Question</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="suggestion" name="purpose" value="Website Suggestion">
+                        <label for="suggestion">Website Suggestion</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <input type="checkbox" id="subscribe" name="subscribe" value="yes">
+                    <label for="subscribe">Please subscribe me to the monthly newsletter</label>
+                </div>
+
+                <div class="form-group">
+                    <button type="submit" class="submit-button">Submit</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Rafting Site Document 🌴 Johnny Ortega 🌴 WDD 130</p>
+        <nav class="sociallinks">
+            <a href="https://facebook.com">
+                <img src="images/facebook.svg" alt="Facebook" class="small-icon">
+            </a>
+            <a href="https://twitter.com">
+                <img src="images/twitter.svg" alt="Twitter" class="small-icon">
+            </a>
+            <a href="https://instagram.com">
+                <img src="images/instagram.svg" alt="Instagram" class="small-icon">
+            </a>
+        </nav>
+    </footer>
+</body>
+</html>

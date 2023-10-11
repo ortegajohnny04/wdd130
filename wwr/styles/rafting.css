@@ -256,3 +256,74 @@ footer {
     width: 120px; /* Adjust the width as needed */
     height: auto; /* Allow the height to adjust proportionally */
 }
+
+/* Common styles for text inputs and text areas */
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+
+/* Common styles for radio buttons and checkboxes */
+input[type="radio"],
+input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+/* Team section styles */
+#employee-profiles {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.employee-profile {
+    flex: 0 0 calc(20% - 10px);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.employee-profile img {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+}
+
+/* Contact form section styles */
+#contact-form {
+    background-color: #f4f4f4;
+    padding: 20px;
+    margin-top: 20px;
+    
+}
+
+.map-container {
+    justify-content: space-evenly;
+}
+
+/* Form group styles */
+.form-group {
+    margin-bottom: 15px;
+}
+
+/* Subscribe checkbox styles */
+input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+/* Submit button styles */
+.submit-button {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}

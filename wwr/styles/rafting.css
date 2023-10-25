@@ -119,6 +119,7 @@ nav ul li a:hover {
     position: relative;
     overflow: hidden;
     height: 400px;
+    
 }
 
 /* Style the hero image */
@@ -327,3 +328,21 @@ input[type="checkbox"] {
     border-radius: 5px;
     cursor: pointer;
 }
+
+.trip {
+    /* existing styles */
+    display: block;
+    text-align: center; /* ensures content is centered */
+    padding: 20px;
+}
+.trip a {
+    display: inline-block; /* allows us to set width and height */
+    padding: 10px 20px; /* or any other values for padding */
+    background-color: #007bff; /* or another color */
+    color: white; /* or another color */
+    text-decoration: none; /* removes the underline */
+    border-radius: 5px; /* if you want rounded corners */
+    margin-top: 20px; /* optional: for space between the description and button */
+}
+
+

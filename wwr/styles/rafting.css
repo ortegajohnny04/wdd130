@@ -346,3 +346,28 @@ input[type="checkbox"] {
 }
 
 
+/* Styles for the call-to-action section */
+.call-to-action {
+    text-align: center; /* centers the text and the button */
+    padding: 20px; /* Add space inside the section */
+    /* other styles like background-color, etc. can be here */
+}
+
+/* Specific styles for the 'Book Your Trip' button */
+.cta-button {
+    display: inline-block; /* allows us to set padding and margins */
+    padding: 10px 30px; /* for larger clickable area */
+    background-color: #007bff; /* Example color */
+    color: #ffffff; /* Text color, white */
+    text-decoration: none; /* removes the underline from the link */
+    border-radius: 5px; /* Optional: for rounded corners */
+    font-weight: bold; /* Optional: if you want bold text */
+    margin-top: 20px; /* Optional: if you want more space between your text and button */
+    transition: background-color 0.3s; /* Optional: for smooth color transition */
+}
+
+.cta-button:hover,
+.cta-button:focus {
+    background-color: #0056b3; /* Darker shade for hover effect */
+    /* Any other hover effects */
+}
